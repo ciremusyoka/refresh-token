@@ -10,7 +10,7 @@ before_script:
 - npm install -g @angular/cli
 script:
 - ng build --prod --base-href https://github.com/ciremusyoka/refresh-token
-# - cp index.php .htaccess dist/refresh-token/
+- cp index.php .htaccess dist/refresh-token/
 deploy:
   provider: heroku
   api_key:
