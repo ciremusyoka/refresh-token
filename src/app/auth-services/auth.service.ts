@@ -52,7 +52,7 @@ export class AuthService {
   getpersonalities(): any {
     const newurl = `${this.apiURL}api/v1/personalities/`;
     return this.http
-      .get(newurl, { headers: this.headers })
+      .get(newurl, { headers: this.headers });
   }
 
   token_refresh(): any {
