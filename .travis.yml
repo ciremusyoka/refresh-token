@@ -11,12 +11,11 @@ before_script:
 script:
 - ng build --prod --base-href https://github.com/ciremusyoka/refresh-token
 - cp index.php .htaccess dist/refresh-token/
-- cd dist/refresh-token
-- ls -A
 deploy:
   provider: heroku
   api_key:
     secure: "MqfpFd2JVXxGVx9czsXeKzm6RYAOuE/YiAmphnrWY/LoJdC4JW3B9YqapEDEbRJty6n8HfFrPmbaqwUD25L+tIxyt7Law9ebswaPMRE8caDmWZC+6in12c0VdvkmYSHjzPGlEukOH5gV/wRvxdaQPumNuVHYUF0jyfaO0OtlwFkvu+GFVmZYltelBcPjeEwXQKY2TjTGkmNf5AdZ30L5NJTQ6rw5yrAMJAYHtDAcNbpNa87mRS0KFasvQWbOrmHSTi2vpvUBjBEf3BE61lRFLBUMpl5LZocsQK61e+B6xv2Ow8nv7/y0VOWBDircX+5/hfh1/H4ac5rQuAcWSnmnZu/DIbZYp5SYI7rSSZ0aH0JzC6QxRoyeNZ0z8ry6Tz6hKibAAcj9WGKmdzoUdp3QpPDcwZfF8xKHnqAxNdJBMhS4/AFtc9tuWUjlzl6nz1l+01jm9sDh8ldCFumNKT3Pa82N26z44dwhYJEE5R39EqK08s3kSwmO6gKcI5qZ710ategv/zWFPGOgINRbHReItlGeIRHY3VkPxHVi1ZvTB0zKW7Ovwa+qdVhzQhhlX8cMpAOtGjR3N+wABIlqlwVkmM8Owu1bX0hfohFG4Tv8U5UMHDquSqKdetFZ0/OmxcWKLGLaTNYEuJ/B26QvDpiA/8ACTo/SqvlsnTy6sMsRdQc="
+  local_dir: dist/refresh-token
   on:
     branch: master
   app: travis-cire
