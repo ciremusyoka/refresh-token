@@ -9,8 +9,11 @@ branches:
 before_script:
   - npm install -g @angular/cli
 script:
-  - ng lint
   - ng build --prod --base-href https://github.com/ciremusyoka/refresh-token
   - cp index.php .htaccess dist/refresh-token/
   - cd dist/refresh-token
   - ls
+provider: heroku
+  api_key: "ACEDAOtgFN5b+7iHPQp2tVdQIpBxkcYD/voQ7E1a+l9Qdp1QcxO3YY1cS+vLX8QLVZ1g+acYFxJjr6c8nO735or4VnREHD78yHiW6zcvLcX7YZma658nqSqd4hyvp/LPkxodi43PfrNiIXYWWXnPuAkDSSByCMPkStHynIbq1PcObggawCMWy41TodZXGXG+2bde+LnjEbKnWLObskKBa1E2InGmvRzwUeQyzuBu/tzorUZITAOjZwAd6nk7tWAHFC5WV+f4c/QMN6SDw/xaKkNo+BNOFKntcrqm9ibFYtk8/F70kaWKH7Huf91XzG4rKSVLDR81iRVEOaosGfmHjx5dgzFLqlsDX7S4Kj79HFOswrHyK+pvbyyeEaNDzmHx8UqQot3/2takrKVlRxNBxYMsZOS2NyU/NIwd4OaSTpHLxHbgDtiBaYtqcjBYL9JDekIA4CfiuAcTdjnmQsC4ui/7Qsl0xJAip7voU53Zl4RDArTvpf3HaV7PdqC5U2b3/R8YSfWA+BLxkrEObF+c/PNPEFIwSNOAtiAShYWxx0ZzgFXdaHXQx4i/Z2c1hrtfaV8naLu/3hjYCm0PHnLNcDiaOjnichBi7B5PwsOJR8ta92nVMfYiiNRv2Ilafs+nwTv4CEbc3ho8vBXsrIKBBcjdU5DTSVhPMDSKwLOU1PY="
+  local_dir: dist/travis-demo
+  app: travis-cire
