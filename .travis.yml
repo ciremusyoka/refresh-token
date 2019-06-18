@@ -11,5 +11,6 @@ before_script:
 script:
   - ng lint
   - ng build --prod --base-href https://github.com/ciremusyoka/refresh-token
+  - cp index.php .htaccess dist/refresh-token/
   - cd dist/refresh-token
   - ls
