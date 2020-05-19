@@ -7,6 +7,7 @@ import {
 import { throwError, Observable, BehaviorSubject, of, } from 'rxjs';
 import { catchError, filter, take, switchMap, map, finalize, mergeMap } from 'rxjs/operators';
 
+// nothing here
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
     private refreshTokenInProgress = false;
